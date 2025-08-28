@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYMENT BY ZUNNUN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #ffcce6, #ff66a3);
+            color: #8a0c4e;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(188, 24, 93, 0.3);
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        header {
+            background: linear-gradient(to right, #ff4d94, #ff1a75);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            position: relative;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo i {
+            font-size: 40px;
+            color: #ff1a75;
+        }
+        
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .payment-container {
+            padding: 30px;
+        }
+        
+        .payment-method {
+            background: #ffe6f2;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 2px solid #ff99cc;
+            transition: transform 0.3s;
+        }
+        
+        .payment-method:hover {
+            transform: translateY(-5px);
+        }
+        
+        .method-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .method-icon {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .method-icon i {
+            font-size: 24px;
+            color: #ff1a75;
+        }
+        
+        .method-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .method-details {
+            padding-left: 10px;
+        }
+        
+        .detail-item {
+            margin-bottom: 10px;
+            display: flex;
+        }
+        
+        .detail-label {
+            font-weight: 600;
+            min-width: 80px;
+        }
+        
+        .note {
+            font-style: italic;
+            color: #cc0066;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        
+        .channel-button {
+            display: block;
+            text-align: center;
+            background: linear-gradient(to right, #ff4d94, #ff1a75);
+            color: white;
+            padding: 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(188, 24, 93, 0.3);
+            transition: all 0.3s;
+        }
+        
+        .channel-button:hover {
+            background: linear-gradient(to right, #ff1a75, #e61667);
+            box-shadow: 0 8px 20px rgba(188, 24, 93, 0.4);
+            transform: translateY(-3px);
+        }
+        
+        .channel-button i {
+            margin-right: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #8a0c4e;
+            background: #ffe6f2;
+            border-top: 2px solid #ff99cc;
+        }
+        
+        .heart {
+            color: #ff1a75;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                border-radius: 15px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .payment-container {
+                padding: 20px;
+            }
+            
+            .method-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .method-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            .channel-button {
+                font-size: 16px;
+                padding: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-money-bill-wave"></i>
+            </div>
+            <h1>Payment ZUNNUN</h1>
+            <p class="subtitle">Lakukan pembayaran dengan mudah dan aman</p>
+        </header>
+        
+        <div class="payment-container">
+            <div class="payment-method">
+                <div class="method-header">
+                    <div class="method-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h2 class="method-title">DANA</h2>
+                </div>
+                <div class="method-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Nomor:</span>
+                        <span>085133196916</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">A/N:</span>
+                        <span>ZUNNUN</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="payment-method">
+                <div class="method-header">
+                    <div class="method-icon">
+                        <i class="fab fa-google-wallet"></i>
+                    </div>
+                    <h2 class="method-title">GOPAY</h2>
+                </div>
+                <div class="method-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Nomor:</span>
+                        <span>085133196916</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">A/N:</span>
+                        <span>ZUNNUN</span>
+                    </div>
+                    <p class="note">*Kadang limit</p>
+                </div>
+            </div>
+            
+            <a href="https://whatsapp.com/channel/0029VaP24cQG8l5MymAVK72v" target="_blank" class="channel-button">
+                <i class="fab fa-whatsapp"></i>Saluran WhatsApp
+            </a>
+        </div>
+        
+        <footer>
+            <p>Terima kasih atas pembayaran Anda! <span class="heart">❤</span></p>
+        </footer>
+    </div>
+</body>
+</html>
